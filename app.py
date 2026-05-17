@@ -1,4 +1,7 @@
-import streamlit as st
+import os
+# 빌드 시 서버에 크롬 브라우저가 없으면 자동으로 강제 설치하는 코드
+if not os.path.exists("/home/adminuser/.cache/ms-playwright"):
+    os.system("playwright install chromium")import streamlit as st
 import requests
 import time
 import random
